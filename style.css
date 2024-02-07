@@ -1,0 +1,24 @@
+.container {
+  background-color: #459f0b;
+  padding: 20px;
+  /* background-image: repeating-linear-gradient(
+    to bottom right,
+    rgb(138, 138, 134) 10%,
+    green 20%
+  ); */
+}
+.first-container {
+  background-color: white;
+  border-radius: 10px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.logo {
+  padding: 10px;
+}
+.header-content {
+  padding: 10px;
+}
