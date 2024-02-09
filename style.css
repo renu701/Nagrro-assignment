@@ -1,24 +1,258 @@
+body {
+  width: 1024px;
+  margin: 0px auto;
+}
 .container {
   background-color: #459f0b;
   padding: 20px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   /* background-image: repeating-linear-gradient(
     to bottom right,
     rgb(138, 138, 134) 10%,
     green 20%
   ); */
 }
-.first-container {
+.first-container,
+.second-container {
   background-color: white;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-image: linear-gradient(#f6f3f3, #d6d6d6);
+  min-height: 67px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 9px 6px;
 }
 .logo {
   padding: 10px;
 }
 .header-content {
   padding: 10px;
+}
+.header-content h4 {
+  color: #253437;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+  margin: 0px;
+}
+.header-content h6 {
+  color: #253437;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+  margin: 0px;
+}
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
+  row-gap: 20px;
+  padding: 20px 15px;
+}
+.new-actions {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
+  row-gap: 20px;
+  padding: 20px 15px;
+}
+.heading-large {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+}
+.heading-small {
+  float: left;
+  margin: 5px 0 0 6px;
+  font-size: 12px;
+}
+.green {
+  color: #459f0b;
+}
+.gray {
+  color: #909090;
+}
+.pg-show {
+  float: left;
+  margin: 10px 0px 0px;
+  font-size: 12px;
+}
+.list {
+  
+}
+#page {
+  width: 40px;
+  margin: 6px 0px 0px;
+}
+.pg-record {
+  margin: 5px 0px 0px;
+  font-size: 12px;
+  display: inline;
+} 
+.justify-endself {
+  justify-self: end;
+}
+.justify-midself {
+  justify-self: center;
+}
+
+.display-list-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
+  padding: 20px 15px;
+}
+.list-items {
+    width: 95%;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #f4f3f3;
+    padding: 5px;
+}
+.list-item-heading {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
+  padding: 10px;
+}
+.list-item-heading .title-first {
+  font-size: 15px;
+  font-weight: bold;
+}
+svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.svg-anch {
+  text-decoration: none;
+}
+
+.details-container {
+  padding: 5px 15px;
+  font-size: 12px;
+}
+
+.details-container p {
+  display: inline-block;
+  margin: 0px 10px 10px;
+}
+.page-numbers p {
+  display: inline;
+  margin: 0px 5px 0px;
+  font-size: 12px;
+}
+.active-page-number {
+  background-color: #459f0b;
+  padding: 1px 5px;
+  border: 1px solid black;
+}
+.primaryBtn {
+  margin: 0 10px 0 0;
+  min-height: 29px;
+  width: 124px;
+  color: #fff;
+  background-color: #464646;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button.pg-record {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.third-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
+  padding: 10px;
+}
+.input-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 10px;
+}
+.inner-input-field {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+  font-size: 12px;
+}
+.inner-input-field input[type='text'],
+.inner-input-field select {
+  width: 100px;
+}
+.clear,
+.clear:hover,
+.clear:focus {
+  border: none;
+  background: none;
+}
+button {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .display-list-container,
+  .input-container ,
+  .input-list,
+  .inner-input-field
+   {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal css */
+.modal{
+    width: 350px;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    
+    background: #fff;
+}
+.modal-title{
+  text-align: center;
+}
+.modal-footer{
+  display: flex;
+  gap:10px;
+  justify-content: flex-end;
+}
+/* end */
+
+.loading{
+  background: rgba(255, 255, 255, 0.5) url('loading.gif') no-repeat center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
 }

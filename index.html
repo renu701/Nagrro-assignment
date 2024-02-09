@@ -1,17 +1,236 @@
-<div id="app"></div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./index.js"></script>
+    <title>Nagrro Ass 🚀</title>
+</head>
+<body>
 <div class="container">
   <div class="first-container">
-    <div>
       <header class="header">
         <div class="logo">logo</div>
-        <div class="header-content">content</div>
+        <div class="header-content">
+          <h4>IncidentOpen Action Tracker</h4>
+          <h6>ICS 233-CG</h6>
+        </div>
       </header>
-    </div>
     
-    <div>dfgtgrtg regrnh</div>
-  </div>
-  <div>
+    <div class="actions-container">
+      <div class="list-container">
+        <div class="list">
+          <p class="heading-large green">List of Actions</p>
+          <p class="heading-small gray">(Incident Location - 10)</p>
+        </div>
+        <div class="list justify-midself">
+          <p class="pg-show">Showing 1 - 4 of 4 Records</p>
+        </div>
+        <div class="list justify-endself">
+          <select name="pages" id="page">
+            <option value="1">1</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+            <option value="audi">30</option>
+          </select>
+          <p class="pg-record">Records Per Page</p>
+        </div>
+      </div>
+      <div class="display-list-container">
+        <div class="list-items">
+          <div class="list-item-heading">
+            <div class="green title-first">1. Lorem Ipsum</div>
+            <div class="justify-endself">
+              <button class="svg-anch clear">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+              </button>
+              <button class="clear" onclick="removeStructure(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="details-container">
+            <p><strong>For/Poc:</strong><span>HON CIRCLE;</span></p>
+            <p><strong>POC Briefed:</strong><span>Miles & More</span></p>
+            <p><strong>Start Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Target Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Actual Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+          </div>
+        </div>
+        <div class="list-items">
+          <div class="list-item-heading">
+            <div class="green title-first">2. Lorem Ipsum</div>
+            <div class="justify-endself">
+              <button class="svg-anch clear">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+              </button>
+              <button class="clear" onclick="removeStructure(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="details-container">
+            <p><strong>For/Poc:</strong><span>HON CIRCLE;</span></p>
+            <p><strong>POC Briefed:</strong><span>Miles & More</span></p>
+            <p><strong>Start Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Target Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Actual Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+          </div>
+        </div>
+        <div class="list-items">
+          <div class="list-item-heading">
+            <div class="green title-first">3. Lorem Ipsum</div>
+            <div class="justify-endself">
+              <button class="svg-anch clear">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+              </button>
+              <button class="clear" onclick="removeStructure(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="details-container">
+            <p><strong>For/Poc:</strong><span>HON CIRCLE;</span></p>
+            <p><strong>POC Briefed:</strong><span>Miles & More</span></p>
+            <p><strong>Start Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Target Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Actual Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+          </div>
+        </div>
+        <div class="list-items">
+          <div class="list-item-heading">
+            <div class="green title-first">4. Lorem Ipsum</div>
+            <div class="justify-endself">
+              <button class="svg-anch clear">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+              </button>
+              <button class="clear" onclick="removeStructure(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="details-container">
+            <p><strong>For/Poc:</strong><span>HON CIRCLE;</span></p>
+            <p><strong>POC Briefed:</strong><span>Miles & More</span></p>
+            <p><strong>Start Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Target Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+            <p><strong>Actual Date:</strong><span>1/29/2010 6:30:00 PM </span></p>
+          </div>
+        </div>
+      </div>
 
-  </div class="second-container">
+      <div class="list-container">
+        <div class="list">
+          <strong class="pg-record">Page</strong>
+          <span class="page-numbers">
+            <p class="active-page-number">1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+          </span>
+        </div>
+        <div class="list justify-midself">
+          <p class="pg-show">Showing 1 - 4 of 4 Records</p>
+        </div>
+        <div class="list justify-endself">
+          <select name="pages" id="page">
+            <option value="1">1</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+            <option value="audi">30</option>
+          </select>
+          <p class="pg-record">Records Per Page</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="second-container">
+    <div class="actions-container">
+      <div class="new-actions">
+        <div class="list">
+          <p class="heading-large green">New Actions</p>
+        </div>
+        <div class="list justify-endself">
+          <button class="primaryBtn" type="button">Insert New Line</button>
+          <button class="primaryBtn" type="button">Reorder List</button>
+          <button class="pg-record" onclick="toggle(this)">Hide</button>
+        </div>
+      </div>
+      <div id="inputForm" class="input-container">
+        <div class="input-list">
+          <div class="inner-input-field">
+            <div>Line No. : </div>
+            <div>
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+          <div class="inner-input-field">
+            <div><label for="poc">For/POC:</label></div>
+            <div>
+              <input type="text" id="poc" name="poc">
+            </div>
+          </div>
+          <div class="inner-input-field">
+            <div><label for="item">Item:</label></div>
+            <div><input type="checkbox" name="item" value="item"></div>
+          </div>
+          <div class="inner-input-field">
+            <div><label for="pocBrefied">POC Briefed:</label></div>
+            <div>
+              <input type="text" id="pocBrefied" name="pocBrefied">
+            </div>
+          </div>
+          <div class="inner-input-field">
+            <div>Status : </div>
+            <div>
+              <select onchange="getValue(this)">
+                <option value="pending">Pending</option>
+                <option value="wip">WIP</option>
+                <option value="done">Done</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="input-list">
+          <div>erf</div>
+          <div>erf</div>
+          <div>df</div>
+          <div>df</div>
+          <div>sdf</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="third-container">
+    <button class="primaryBtn" type="button" onclick="showLoader()">Save</button>
+    <button class="primaryBtn" type="button">Save & Exit</button>
+    <button class="primaryBtn" type="button">Cancel</button>
+  </div>
 </div>
+
+<!-- status modal -->
+<div class="modal" id="statusModal" style="display: none;">
+  <p class="modal-title">
+    Are you sure you want to change the status to DONE?
+  </p>
+  <div class="modal-footer">
+    <button class="submit" onclick="hideModal(this)">No</button>
+    <button class="submit" onclick="hideModal(this)">Yes</button>
+  </div>
+</div>
+<!-- end status Modal -->
+
+<div class="loading" id="loading" style="display: none"></div>
+</body>
+</html>
+
