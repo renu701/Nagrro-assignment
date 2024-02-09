@@ -44,6 +44,6 @@ function showLoader(){
 function hideLoader() {
     const loading = document.getElementById("loading");
     loading.style.display="none";
-    window.location.href = '/thanks.html'
+    window.location.href = 'thanks.html'
 
 }
